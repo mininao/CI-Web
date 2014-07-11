@@ -1,0 +1,165 @@
+/********************JUMBOTRON / SLIDER *********************/
+.jumbotron {
+    padding-top: 5rem;
+    height: 40rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+/*    div {
+        
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+        height: 100%;
+    }*/
+    div.e1 {
+        background-image: url(../images/slider/1.jpg);
+        background-size: cover; 
+    }
+     /*background: color position/size repeat origin clip attachment image|initial|inherit;*/
+   /* div.e2 { background: url(../images/slider/2.jpg) no-repeat center center fixed; }
+    div.e3 { background: url(../images/slider/1.jpg) no-repeat center center fixed; }*/
+    div {
+        height: 100%;
+        img {
+            width: 100%;
+            margin-top: -15%;
+        }
+    }
+
+}
+
+
+/*****************************ARTICLES*******************************/
+#articles {
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        color: $1;
+    }
+    .row {
+        max-width: none;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        /*margin-bottom: 2rem;*/
+        .articlewrap {
+            /*background-color: blue;
+            border: 3px solid white;*/
+            margin-bottom: 2rem;
+            .article {
+                background-color: $2;
+                padding: 1rem 0.8rem;    
+                h2 {
+                    text-align: center;
+                    font-weight: 400;
+                    
+                    color: $1;
+                }
+                p {
+                    text-align: justify;
+                    color: $3l;
+                }
+                a:hover, a:focus, a:active, a:visited, a {
+                    color: $3l;
+                    transition: color .3s, border .3s, border-style 1s;
+                    border-bottom: 1px solid $3l;
+                    text-align: center;
+                }
+                a:hover, a:active, {
+                    color: $1;
+                    border-bottom: 1px solid $1;
+                }                       
+            }
+        }
+    }
+}
+
+/*****************************ACTUS*******************************/
+#actus {
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        color: $1;
+    }
+    .row {
+        max-width: none;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        /*margin-bottom: 2rem;*/
+        .actuwrap {
+            /*background-color: blue;
+            border: 3px solid white;*/
+            margin-bottom: 2rem;
+            .actu {
+                background-color: $2;
+                padding: 1rem 0.8rem;    
+                h2 {
+                    text-align: center;
+                    font-weight: 400;
+                    
+                    color: $1;
+                }
+                p {
+                    text-align: justify;
+                    color: $3l;
+                }
+                a:hover, a:focus, a:active, a:visited, a {
+                    color: $3l;
+                    transition: color .3s, border .3s, border-style 1s;
+                    border-bottom: 1px solid $3l;
+                    text-align: center;
+                }
+                a:hover, a:active, {
+                    color: $1;
+                    border-bottom: 1px solid $1;
+                }                       
+            }
+        }
+    }
+}
+/*****************************VIDEO*******************************/
+#videos {
+   
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        color: $1;
+        margin-top: 4rem;
+    }
+    .row {
+        max-width: none;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2rem;
+        .videowrap {
+            /*background-color: blue;
+            border: 3px solid white;*/
+            margin-bottom: 2rem;
+            .video {
+                background-color: $2;
+                padding: 1rem 0.8rem;
+                background: url(../images/Head.png) no-repeat center center scroll;
+                background-size: cover;
+                min-height: 14rem;
+                transition: background-image .3s;
+                .play {
+                    color: $1;
+                    font-size: 10rem;
+                    text-align: center;
+                }
+                h3.title {
+                    text-align: center;
+                    color: $1;
+                    font-size: 3rem;
+                    transition: color .3s;
+                }              
+            }
+        }
+    }
+    #v1,#v2,#v3,#v4 {background-image: url(../images/videos/thumb1f.jpg);}
+    #v1:hover,#v2:hover,#v3:hover,#v4:hover {background-image: url(../images/videos/thumb1.jpg);}
+}

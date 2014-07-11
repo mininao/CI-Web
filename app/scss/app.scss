@@ -1,0 +1,82 @@
+@import "normalize";
+@import "settings";
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Behold, here are all the Foundation components.
+@import
+  "foundation/components/grid",
+  "foundation/components/accordion",
+  "foundation/components/alert-boxes",
+  "foundation/components/block-grid",
+  "foundation/components/breadcrumbs",
+  "foundation/components/button-groups",
+  "foundation/components/buttons",
+  "foundation/components/clearing",
+  "foundation/components/dropdown",
+  "foundation/components/dropdown-buttons",
+  "foundation/components/flex-video",
+  "foundation/components/forms",
+  "foundation/components/icon-bar",
+  "foundation/components/inline-lists",
+  "foundation/components/joyride",
+  "foundation/components/keystrokes",
+  "foundation/components/labels",
+  "foundation/components/magellan",
+  "foundation/components/orbit",
+  "foundation/components/pagination",
+  "foundation/components/panels",
+  "foundation/components/pricing-tables",
+  "foundation/components/progress-bars",
+  "foundation/components/range-slider",
+  "foundation/components/reveal",
+  "foundation/components/side-nav",
+  "foundation/components/split-buttons",
+  "foundation/components/sub-nav",
+  "foundation/components/switches",
+  "foundation/components/tables",
+  "foundation/components/tabs",
+  "foundation/components/thumbs",
+  "foundation/components/tooltips",
+  "foundation/components/top-bar",
+  "foundation/components/type",
+  "foundation/components/offcanvas",
+  "foundation/components/visibility";
+
+  @import "appstyles";
+$font-body: "Roboto", sans-serif;
+$font-head: "Oswald", sans-serif;
+
+$1:  #EB3B36;
+$2:  #3D505B;
+$3d: #047368;
+$3m: #21A589;
+$3l: #B0F3C6;
+$bg: #bdc3c7;
+
+body {
+    min-height: 100%;
+    background-color: #bdc3c7;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-head;
+    font-weight: 900;
+}
+
+@import "nav";
+@import "sections";
+@import "page";
+
+#content {
+     height: 100%;   
+}
+.large-2 {
+    height: 500px;
+}
+.c1 {background-color: $1;}
+.c2 {background-color: $2;}
+.c3d {background-color: $3d;}
+.c3m {background-color: $3m;}
+.c3l {background-color: $3l;}
