@@ -27,7 +27,6 @@ var app = (function(document, $) {
 
 
 $(document).ready(function(){
-    'use strict';
 	$('.jumbotron').slick({
         arrows:false,
         autoplay:true,
@@ -37,4 +36,8 @@ $(document).ready(function(){
         fade: true,
         speed: 500
 	});
+});
+
+$('#togglenav').click(function(){ 'use strict';
+    $('nav .mobile').fadeToggle(300);
 });

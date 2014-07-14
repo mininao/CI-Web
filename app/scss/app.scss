@@ -45,6 +45,7 @@
   "foundation/components/visibility";
 
   @import "appstyles";
+  /*@import "fonts";*/
 $font-body: "Roboto", sans-serif;
 $font-head: "Oswald", sans-serif;
 
@@ -54,7 +55,7 @@ $3d: #047368;
 $3m: #21A589;
 $3l: #B0F3C6;
 $bg: #bdc3c7;
-
+$lightText: #ecf0f1;
 body {
     min-height: 100%;
     background-color: #bdc3c7;

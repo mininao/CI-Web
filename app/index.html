@@ -22,34 +22,61 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
     
+    <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" type="text/css">
+  
+    
     
   </head>
   <body>
     <!--Body content here -->
 <div id="wrapall">
     <nav id="main">
-        <div class="left">        
-            <h1>
-                CI <span>E1</span>
-            </h1>
+       <div class="bar clearfix">
+            <div class="left">        
+                <a href="/"><h1>
+                    CI <span>E1</span>
+                </h1></a>
+            </div>
+            <div class="left">
+                <img src="images/Head_small.png" alt="CI">            
+            </div>            
+            <div class="right show-for-medium-up">
+                <ul class="inline-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>Forum</li>
+                    <li><a href="page.html">Articles</a></li>
+                    <li>Actus</li>
+                    <li>Vidéos</li>
+                </ul>
+            </div>
+            <div class="right show-for-small-only" id="togglenav">
+                <i class="ion-navicon"></i>
+            </div>
         </div>
-        <div class="left">
-            <img src="images/Head_small.png" alt="CI">            
-        </div>            
-        <div class="right">
-            <ul class="inline-list">
+        <div class="mobile hide show-for-small-only">
+            <ul class="">
                 <li><a href="index.html">Home</a></li>
                 <li>Forum</li>
                 <li><a href="page.html">Articles</a></li>
                 <li>Actus</li>
                 <li>Vidéos</li>
-            </ul>
+            </ul>            
         </div>
     </nav>
-    <section class="jumbotron">
-        <div class="e1"><!--<img src="images/slider/1.jpg" alt="">--></div>
+    <!--<section class="jumbotron">
+        <div class="e1"><img src="images/slider/1.jpg" alt=""></div>
         <div class="e2"><img src="images/slider/2.jpg" alt=""></div>
-    </section>
+    </section>-->
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                    <img src="images/slider/1.jpg" />
+            </li>
+            <li>
+                    <img src="images/slider/2.jpg" />
+            </li>
+        </ul>
+    </div>
     <section id="articles" class="">
         <h1>Les articles</h1>
         <div class="row">
@@ -217,11 +244,18 @@
     <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>-->
+    <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
     <!-- endbuild -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js"></script>
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+    $('.flexslider').flexslider();
+    });
+    </script>      
     <!-- endbuild -->
+    
     </div>
   </body>
 </html>

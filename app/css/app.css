@@ -5198,6 +5198,7 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 /* all app scss styles here */
+/*@import "fonts";*/
 body {
   min-height: 100%;
   background-color: #bdc3c7; }
@@ -5244,7 +5245,29 @@ nav#main {
         font-size: 1.8rem;
         line-height: 5rem;
         font-family: "Oswald", sans-serif;
-        color: #EB3B36; }
+        color: #EB3B36;
+        text-transform: uppercase;
+        font-weight: 300; }
+    nav#main div.right .ion-navicon {
+      font-size: 4rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: #EB3B36; }
+  nav#main .mobile ul {
+    list-style: none;
+    background-color: #EB3B36;
+    margin-left: 0; }
+    nav#main .mobile ul li {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    nav#main .mobile ul li, nav#main .mobile ul li a, nav#main .mobile ul li a:hover, nav#main .mobile ul li a:visited, nav#main .mobile ul li a:focus, nav#main .mobile ul li a:active {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      font-family: "Oswald", sans-serif;
+      color: #3D505B;
+      text-transform: uppercase;
+      font-weight: 300; }
 
 /*FOOTER*/
 #wrapall {
@@ -5286,6 +5309,7 @@ ul.members {
 footer:hover .members {
   color: #B0F3C6; }
 
+/**************** MIXINS *****************/
 /********************JUMBOTRON / SLIDER *********************/
 .jumbotron {
   padding-top: 5rem;
@@ -5316,8 +5340,10 @@ footer:hover .members {
 /*****************************ARTICLES*******************************/
 #articles h1 {
   text-align: center;
-  font-weight: 700;
-  color: #EB3B36; }
+  font-weight: 300;
+  color: #EB3B36;
+  text-transform: uppercase;
+  font-size: 3.2rem; }
 #articles .row {
   max-width: none;
   width: 90%;
@@ -5337,11 +5363,11 @@ footer:hover .members {
         color: #EB3B36; }
       #articles .row .articlewrap .article p {
         text-align: justify;
-        color: #B0F3C6; }
+        color: #ecf0f1; }
       #articles .row .articlewrap .article a:hover, #articles .row .articlewrap .article a:focus, #articles .row .articlewrap .article a:active, #articles .row .articlewrap .article a:visited, #articles .row .articlewrap .article a {
-        color: #B0F3C6;
+        color: #ecf0f1;
         transition: color 0.3s, border 0.3s, border-style 1s;
-        border-bottom: 1px solid #B0F3C6;
+        border-bottom: 1px solid #ecf0f1;
         text-align: center; }
       #articles .row .articlewrap .article a:hover, #articles .row .articlewrap .article a:active {
         color: #EB3B36;
@@ -5350,8 +5376,10 @@ footer:hover .members {
 /*****************************ACTUS*******************************/
 #actus h1 {
   text-align: center;
-  font-weight: 700;
-  color: #EB3B36; }
+  font-weight: 300;
+  color: #EB3B36;
+  text-transform: uppercase;
+  font-size: 3.2rem; }
 #actus .row {
   max-width: none;
   width: 90%;
@@ -5371,11 +5399,11 @@ footer:hover .members {
         color: #EB3B36; }
       #actus .row .actuwrap .actu p {
         text-align: justify;
-        color: #B0F3C6; }
+        color: #ecf0f1; }
       #actus .row .actuwrap .actu a:hover, #actus .row .actuwrap .actu a:focus, #actus .row .actuwrap .actu a:active, #actus .row .actuwrap .actu a:visited, #actus .row .actuwrap .actu a {
-        color: #B0F3C6;
+        color: #ecf0f1;
         transition: color 0.3s, border 0.3s, border-style 1s;
-        border-bottom: 1px solid #B0F3C6;
+        border-bottom: 1px solid #ecf0f1;
         text-align: center; }
       #actus .row .actuwrap .actu a:hover, #actus .row .actuwrap .actu a:active {
         color: #EB3B36;
@@ -5384,9 +5412,10 @@ footer:hover .members {
 /*****************************VIDEO*******************************/
 #videos h1 {
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   color: #EB3B36;
-  margin-top: 4rem; }
+  text-transform: uppercase;
+  font-size: 3.2rem; }
 #videos .row {
   max-width: none;
   width: 90%;
@@ -5422,7 +5451,8 @@ body.page div.main {
   padding-top: 5rem; }
   body.page div.main h1 {
     margin-top: 2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    color: #EB3B36; }
 
 #content {
   height: 100%; }

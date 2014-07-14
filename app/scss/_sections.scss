@@ -1,3 +1,31 @@
+/**************** MIXINS *****************/
+@mixin standard-title($color) {
+        text-align: center;
+        font-weight: 300;
+        color: $color;
+        text-transform: uppercase;
+        font-size: 3.2rem;    
+}
+
+@mixin standard-preview() {
+        p {
+            text-align: justify;
+            color: $lightText;
+        }
+        a:hover, a:focus, a:active, a:visited, a {
+            color: $lightText;
+            transition: color .3s, border .3s, border-style 1s;
+            border-bottom: 1px solid $lightText;
+            text-align: center;
+        }
+        a:hover, a:active, {
+            color: $1;
+            border-bottom: 1px solid $1;
+        } 
+}
+
+
+
 /********************JUMBOTRON / SLIDER *********************/
 .jumbotron {
     padding-top: 5rem;
@@ -34,9 +62,7 @@
 /*****************************ARTICLES*******************************/
 #articles {
     h1 {
-        text-align: center;
-        font-weight: 700;
-        color: $1;
+        @include standard-title($1);
     }
     .row {
         max-width: none;
@@ -57,20 +83,7 @@
                     
                     color: $1;
                 }
-                p {
-                    text-align: justify;
-                    color: $3l;
-                }
-                a:hover, a:focus, a:active, a:visited, a {
-                    color: $3l;
-                    transition: color .3s, border .3s, border-style 1s;
-                    border-bottom: 1px solid $3l;
-                    text-align: center;
-                }
-                a:hover, a:active, {
-                    color: $1;
-                    border-bottom: 1px solid $1;
-                }                       
+                @include standard-preview();
             }
         }
     }
@@ -79,9 +92,7 @@
 /*****************************ACTUS*******************************/
 #actus {
     h1 {
-        text-align: center;
-        font-weight: 700;
-        color: $1;
+         @include standard-title($1);
     }
     .row {
         max-width: none;
@@ -102,20 +113,7 @@
                     
                     color: $1;
                 }
-                p {
-                    text-align: justify;
-                    color: $3l;
-                }
-                a:hover, a:focus, a:active, a:visited, a {
-                    color: $3l;
-                    transition: color .3s, border .3s, border-style 1s;
-                    border-bottom: 1px solid $3l;
-                    text-align: center;
-                }
-                a:hover, a:active, {
-                    color: $1;
-                    border-bottom: 1px solid $1;
-                }                       
+            @include standard-preview();                      
             }
         }
     }
@@ -124,10 +122,7 @@
 #videos {
    
     h1 {
-        text-align: center;
-        font-weight: 700;
-        color: $1;
-        margin-top: 4rem;
+         @include standard-title($1);
     }
     .row {
         max-width: none;
