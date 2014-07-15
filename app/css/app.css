@@ -5203,6 +5203,9 @@ body {
   min-height: 100%;
   background-color: #bdc3c7; }
 
+p {
+  font-family: "Open Sans", sans-serif; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   font-weight: 900; }
@@ -5255,7 +5258,8 @@ nav#main {
       color: #EB3B36; }
   nav#main .mobile ul {
     list-style: none;
-    background-color: #EB3B36;
+    border-top: 3px solid #EB3B36;
+    background-color: #3D505B;
     margin-left: 0; }
     nav#main .mobile ul li {
       display: block;
@@ -5265,7 +5269,7 @@ nav#main {
       font-size: 1.8rem;
       line-height: 1.8;
       font-family: "Oswald", sans-serif;
-      color: #3D505B;
+      color: #EB3B36;
       text-transform: uppercase;
       font-weight: 300; }
 
@@ -5310,68 +5314,54 @@ footer:hover .members {
   color: #B0F3C6; }
 
 /**************** MIXINS *****************/
-/********************JUMBOTRON / SLIDER *********************/
-.jumbotron {
-  padding-top: 5rem;
-  height: 40rem;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  /*    div {
-        
+/*****************************ARTICLES*******************************/
+#articles {
+  padding-top: 6rem; }
+  #articles h1 {
+    text-align: center;
+    font-weight: 300;
+    color: #EB3B36;
+    text-transform: uppercase;
+    font-size: 3.2rem; }
+  #articles .row {
+    max-width: none;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+    #articles .row .articlewrap {
+      margin-bottom: 2rem; }
+      #articles .row .articlewrap .article {
+        background-color: #3D505B;
+        background: url(../images/articles/wei.jpg) no-repeat center center;
+        text-align: right;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover; 
-        height: 100%;
-    }*/
-  /*background: color position/size repeat origin clip attachment image|initial|inherit;*/
-  /* div.e2 { background: url(../images/slider/2.jpg) no-repeat center center fixed; }
-    div.e3 { background: url(../images/slider/1.jpg) no-repeat center center fixed; }*/ }
-  .jumbotron div.e1 {
-    background-image: url(../images/slider/1.jpg);
-    background-size: cover; }
-  .jumbotron div {
-    height: 100%; }
-    .jumbotron div img {
-      width: 100%;
-      margin-top: -15%; }
-
-/*****************************ARTICLES*******************************/
-#articles h1 {
-  text-align: center;
-  font-weight: 300;
-  color: #EB3B36;
-  text-transform: uppercase;
-  font-size: 3.2rem; }
-#articles .row {
-  max-width: none;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  /*margin-bottom: 2rem;*/ }
-  #articles .row .articlewrap {
-    /*background-color: blue;
-            border: 3px solid white;*/
-    margin-bottom: 2rem; }
-    #articles .row .articlewrap .article {
-      background-color: #3D505B;
-      padding: 1rem 0.8rem; }
-      #articles .row .articlewrap .article h2 {
-        text-align: center;
-        font-weight: 400;
-        color: #EB3B36; }
-      #articles .row .articlewrap .article p {
-        text-align: justify;
-        color: #ecf0f1; }
-      #articles .row .articlewrap .article a:hover, #articles .row .articlewrap .article a:focus, #articles .row .articlewrap .article a:active, #articles .row .articlewrap .article a:visited, #articles .row .articlewrap .article a {
-        color: #ecf0f1;
-        transition: color 0.3s, border 0.3s, border-style 1s;
-        border-bottom: 1px solid #ecf0f1;
-        text-align: center; }
-      #articles .row .articlewrap .article a:hover, #articles .row .articlewrap .article a:active {
-        color: #EB3B36;
-        border-bottom: 1px solid #EB3B36; }
+        background-size: cover;
+        padding: 2rem 0.8rem;
+        cursor: pointer;
+        overflow-x: hidden; }
+        #articles .row .articlewrap .article h2 {
+          color: #B0F3C6;
+          font-size: 2.7rem;
+          line-height: 1;
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 0.1rem;
+          margin-right: -2.4rem;
+          transition: margin-right 0.3s;
+          margin-top: 0;
+          margin-bottom: 0;
+          min-width: 100%; }
+        #articles .row .articlewrap .article h2:hover {
+          margin-right: 0; }
+        #articles .row .articlewrap .article span {
+          margin-left: 2rem; }
+        @media only screen and (max-width: 40em) {
+          #articles .row .articlewrap .article span {
+            display: none; }
+          #articles .row .articlewrap .article h2, #articles .row .articlewrap .article h2:hover {
+            margin-right: 0; } }
 
 /*****************************ACTUS*******************************/
 #actus h1 {
@@ -5404,10 +5394,13 @@ footer:hover .members {
         color: #ecf0f1;
         transition: color 0.3s, border 0.3s, border-style 1s;
         border-bottom: 1px solid #ecf0f1;
-        text-align: center; }
+        text-align: center;
+        font-weight: 600; }
       #actus .row .actuwrap .actu a:hover, #actus .row .actuwrap .actu a:active {
         color: #EB3B36;
         border-bottom: 1px solid #EB3B36; }
+      #actus .row .actuwrap .actu .pub {
+        font-style: italic; }
 
 /*****************************VIDEO*******************************/
 #videos h1 {
@@ -5428,24 +5421,35 @@ footer:hover .members {
     margin-bottom: 2rem; }
     #videos .row .videowrap .video {
       background-color: #3D505B;
-      padding: 1rem 0.8rem;
-      background: url(../images/Head.png) no-repeat center center scroll;
+      padding: 0;
+      background-color: #3D505B;
       background-size: cover;
       min-height: 14rem;
-      transition: background-image 0.3s; }
+      cursor: pointer; }
       #videos .row .videowrap .video .play {
         color: #EB3B36;
         font-size: 10rem;
         text-align: center; }
-      #videos .row .videowrap .video h3.title {
-        text-align: center;
+      #videos .row .videowrap .video .title {
+        padding: 0.5rem 0; }
+        #videos .row .videowrap .video .title h3 {
+          text-align: center;
+          color: #EB3B36;
+          font-size: 3rem;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 300;
+          text-transform: uppercase; }
+      #videos .row .videowrap .video .thumbnail {
         color: #EB3B36;
-        font-size: 3rem;
-        transition: color 0.3s; }
-#videos #v1, #videos #v2, #videos #v3, #videos #v4 {
-  background-image: url(../images/videos/thumb1f.jpg); }
-#videos #v1:hover, #videos #v2:hover, #videos #v3:hover, #videos #v4:hover {
-  background-image: url(../images/videos/thumb1.jpg); }
+        font-size: 10rem;
+        text-align: center;
+        background-color: blue;
+        background: url(../images/articles/wei.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-y: hidden; }
 
 body.page div.main {
   padding-top: 5rem; }

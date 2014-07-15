@@ -59,7 +59,8 @@ nav#main {
     }
     .mobile ul {
         list-style: none;
-        background-color: $1;
+        border-top: 3px solid $1;
+        background-color: $2;
         margin-left: 0;
         li {
             display: block;
@@ -70,9 +71,9 @@ nav#main {
             font-size: 1.8rem;
             line-height: 1.8;
             font-family: $font-head;
-            color: $2;
+            color: $1;
             text-transform: uppercase;
-            font-weight: 300;            
+            font-weight: 300;      
         }        
     }
 }

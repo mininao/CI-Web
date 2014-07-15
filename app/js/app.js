@@ -26,17 +26,6 @@ var app = (function(document, $) {
 })();
 
 
-$(document).ready(function(){
-	$('.jumbotron').slick({
-        arrows:false,
-        autoplay:true,
-        autoplaySpeed:4000,
-        lazyLoad:'progressive',
-        dots: false,
-        fade: true,
-        speed: 500
-	});
-});
 
 $('#togglenav').click(function(){ 'use strict';
     $('nav .mobile').fadeToggle(300);

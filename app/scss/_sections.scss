@@ -17,6 +17,7 @@
             transition: color .3s, border .3s, border-style 1s;
             border-bottom: 1px solid $lightText;
             text-align: center;
+            font-weight: 600;
         }
         a:hover, a:active, {
             color: $1;
@@ -26,41 +27,11 @@
 
 
 
-/********************JUMBOTRON / SLIDER *********************/
-.jumbotron {
-    padding-top: 5rem;
-    height: 40rem;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-/*    div {
-        
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; 
-        height: 100%;
-    }*/
-    div.e1 {
-        background-image: url(../images/slider/1.jpg);
-        background-size: cover; 
-    }
-     /*background: color position/size repeat origin clip attachment image|initial|inherit;*/
-   /* div.e2 { background: url(../images/slider/2.jpg) no-repeat center center fixed; }
-    div.e3 { background: url(../images/slider/1.jpg) no-repeat center center fixed; }*/
-    div {
-        height: 100%;
-        img {
-            width: 100%;
-            margin-top: -15%;
-        }
-    }
-
-}
 
 
 /*****************************ARTICLES*******************************/
 #articles {
+    padding-top: 6rem;
     h1 {
         @include standard-title($1);
     }
@@ -69,21 +40,47 @@
         width: 90%;
         margin-right: auto;
         margin-left: auto;
-        /*margin-bottom: 2rem;*/
         .articlewrap {
-            /*background-color: blue;
-            border: 3px solid white;*/
             margin-bottom: 2rem;
             .article {
                 background-color: $2;
-                padding: 1rem 0.8rem;    
+                background: url(../images/articles/wei.jpg) no-repeat center center ;
+                text-align: right;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;                
+                padding: 2rem 0.8rem;
+                cursor: pointer;
+                overflow-x: hidden;
                 h2 {
-                    text-align: center;
+                    color: $3l;
+                    font-size: 2.7rem;
+                    line-height: 1;
+                    text-transform: uppercase;
                     font-weight: 400;
+                    letter-spacing: .1rem;
+                    margin-right: -2.4rem;
+                    transition: margin-right .3s;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    min-width: 100%;
                     
-                    color: $1;
                 }
-                @include standard-preview();
+                h2:hover {
+                    margin-right: 0;
+                }
+                span {
+                    margin-left: 2rem;
+                }
+                @media #{$small-only} { 
+                    span {
+                        display: none;
+                    }
+                    h2, h2:hover {
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }
@@ -113,7 +110,10 @@
                     
                     color: $1;
                 }
-            @include standard-preview();                      
+            @include standard-preview();
+                .pub {
+                    font-style: italic;
+                }
             }
         }
     }
@@ -136,25 +136,40 @@
             margin-bottom: 2rem;
             .video {
                 background-color: $2;
-                padding: 1rem 0.8rem;
-                background: url(../images/Head.png) no-repeat center center scroll;
+                padding: 0;
+                background-color: $2;
                 background-size: cover;
                 min-height: 14rem;
-                transition: background-image .3s;
+                cursor: pointer;
                 .play {
                     color: $1;
                     font-size: 10rem;
                     text-align: center;
                 }
-                h3.title {
-                    text-align: center;
+                .title {
+                    padding: 0.5rem 0;
+                    h3 {
+                        text-align: center;
+                        color: $1;
+                        font-size: 3rem;
+                        font-family: $font-body;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                    }
+                }
+                .thumbnail {
                     color: $1;
-                    font-size: 3rem;
-                    transition: color .3s;
-                }              
+                    font-size: 10rem;
+                    text-align: center;
+                    background-color: blue;
+                    background: url(../images/articles/wei.jpg) no-repeat center center;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;                     
+                    overflow-y: hidden;
+                }
             }
         }
     }
-    #v1,#v2,#v3,#v4 {background-image: url(../images/videos/thumb1f.jpg);}
-    #v1:hover,#v2:hover,#v3:hover,#v4:hover {background-image: url(../images/videos/thumb1.jpg);}
 }
