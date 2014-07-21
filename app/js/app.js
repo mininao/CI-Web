@@ -30,3 +30,14 @@ var app = (function(document, $) {
 $('#togglenav').click(function(){ 'use strict';
     $('nav .mobile').fadeToggle(300);
 });
+
+$('.video .thumbnail').click(function(){
+    
+    var embed = $(this).parent().attr('data-embed');
+    $('#embedded').attr('src','//www.youtube-nocookie.com/embed/' + embed + '?rel=0&autoplay=1&theme=light&modestbranding=1');
+    $('#video_overlay').fadeIn();
+});
+
+$('#close_overlay').click(function(){
+    $('#video_overlay').fadeOut();
+});

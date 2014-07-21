@@ -1,0 +1,15 @@
+{{!< default}}
+           <div class="row spacenav error">
+               <h1 class="main">Erreur {{code}} <i class="ion-sad"></i></h1>
+               <h2>{{message}}</h2>
+               <p class="st">Stacktrace :</p>
+        <ul class="error-stack-list">
+            {{#foreach stack}}
+                <li>
+                    at
+                    {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
+                    <span class="error-stack-file">({{at}})</span>
+                </li>
+            {{/foreach}}
+        </ul>                              
+           </div>

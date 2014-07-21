@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd:'<%= app %>/',
-					src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+					src: ['fonts/**', '**/*.html','**/*.hbs', '!**/*.scss', '!bower_components/**'],
 					dest: '<%= dist %>/'
 				} , {
 					expand: true,
@@ -52,6 +52,12 @@ module.exports = function(grunt) {
 					filter: 'isFile'
 				} ]
 			},
+			theme: {
+				files: [
+					{expand: true, cwd: '<%= app %>/theme/' ,src: ['**'], dest: '/home/mininao/CI/ghost/content/themes/ci'},
+					{expand: true, cwd: '<%= dist %>/' ,src: ['**'], dest: '/home/mininao/CI/ghost/content/themes/ci'},
+				]
+			},			
 		},
 
 		imagemin: {
@@ -73,14 +79,14 @@ module.exports = function(grunt) {
 		},
 
 		useminPrepare: {
-			html: ['<%= app %>/index.html'],
+			html: ['<%= app %>/index.html','<%= app %>/default.hbs'],
 			options: {
 				dest: '<%= dist %>'
 			}
 		},
 
 		usemin: {
-			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
+			html: ['<%= dist %>/**/*.html','<%= dist %>/**/*.hbs', '!<%= app %>/bower_components/**'],
 			css: ['<%= dist %>/css/**/*.css'],
 			options: {
 				dirs: ['<%= dist %>']
@@ -129,7 +135,8 @@ module.exports = function(grunt) {
 		wiredep: {
 			target: {
 				src: [
-					'<%= app %>/**/*.html'
+					'<%= app %>/**/*.html',
+					'<%= app %>/**/*.hbs'
 				],
 				exclude: [
 					'modernizr',
@@ -167,6 +174,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
-
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist','newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:theme']);
+	grunt.registerTask('fpublish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:theme']);
 };

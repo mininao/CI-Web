@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI E1</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,400italic' rel='stylesheet' type='text/css'>
+  
+    
+    
+  </head>
+  <body>
+    <!--Body content here -->
+    <div id="video_overlay">
+      <div class="icon" id="close_overlay">
+          <i class="ion-ios7-close-empty"></i>
+      </div>
+       <div class="player">
+           <iframe id="embedded" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+       </div>
+    </div>   
+    
+<div id="wrapall">
+    <nav id="main">
+       <div class="bar clearfix">
+            <div class="left">        
+                <a href="/"><h1>
+                    CI <span>E1</span>
+                </h1></a>
+            </div>
+            <div class="left">
+                <img src="images/Head_small.png" alt="CI">            
+            </div>            
+            <div class="right show-for-medium-up">
+                <ul class="inline-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>Forum</li>
+                    <li><a href="page.html">Articles</a></li>
+                    <li>Actus</li>
+                    <li>Vidéos</li>
+                </ul>
+            </div>
+            <div class="right show-for-small-only" id="togglenav">
+                <i class="ion-navicon"></i>
+            </div>
+        </div>
+        <div class="mobile hide">
+            <ul class="">
+                <li><a href="index.html">Home</a></li>
+                <li>Forum</li>
+                <li><a href="page.html">Articles</a></li>
+                <li>Actus</li>
+                <li>Vidéos</li>
+            </ul>            
+        </div>
+    </nav>
+            
+           <div class="row spacenav error">
+               <h1 class="main">Erreur 404 <i class="ion-sad"></i></h1>
+               <h2>Page not found</h2>
+               <p class="st">Stacktrace :</p>
+        <ul class="error-stack-list">
+                <li>
+                    at
+                    <em class="error-stack-function">test()</em>
+                    <span class="error-stack-file">(Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cumque laboriosam minus )</span>
+                </li>
+                <li>
+                    at
+                    <em class="error-stack-function">test()</em>
+                    <span class="error-stack-file">(Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cumque laboriosam minus )</span>
+                </li>                
+        </ul>                              
+           </div>
+
+
+
+</div> <!-- End of wrapall -->
+    <footer>
+        <div class="row">
+            <div class="medium-5 columns">
+            <p>
+                License 
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/">
+                    <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/fr/80x15.png" />
+                </a><br>
+                Design par <a href="http://maxenceaici.fr">Maxence Aïci</a> <br>
+                
+            </p>
+            </div>
+            <div class="medium-7 columns">
+            <p>Merci à tous les membres du CI E1 2014 et particulièrement à</p>
+                <ul class="members">
+                    <li>Victor Talvaz aka Kinder (Club *Nix)</li>
+                    <li>Florian Loyau aka Fira (Club *Nix)</li>
+                    <li>Franck Bonnet (SMIG ESIEE)</li>
+                    <li>DGQP</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+   <div class="scripts">
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<!--    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>-->
+    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+<!--    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>-->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    
+    <!-- endbuild -->
+    
+    </div>
+  </body>
+</html>

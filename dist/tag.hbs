@@ -1,0 +1,15 @@
+{{!< default}}  
+    <section id="actus" class="spacenav">
+        <h1>Les actus</h1>
+        {{#foreach posts columns=4}}
+           {{#if @rowStart}}<div class="row">{{/if}}
+                <div class="actuwrap small-12 medium-6 large-3 columns">
+                    <div class="actu">
+                        <h2>{{title}}</h2>
+                        <p>{{excerpt characters="400"}} ... <br> <a href="{{url}}">Lire la suite !</a> <br></p>
+                        <p class="pub text-right">Publié le {{date published_at format="D/M/YYYY"}} par {{author}}</p>
+                    </div>
+                </div>     
+            {{#if @rowEnd}}</div>{{/if}}           
+        {{/foreach}}
+    </section>

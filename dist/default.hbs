@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI E1 - {{meta_title}}</title>
+    
+    <link rel="stylesheet" href="{{@blog.url}}/css/libraries.min.css"/>
+    <link rel="stylesheet" href="{{@blog.url}}/css/app.min.css"/>
+    <script src="{{@blog.url}}/js/vendor/modernizr.min.js"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,400italic' rel='stylesheet' type='text/css'>
+  
+    {{ghost_head}}
+    
+  </head>
+  <body>
+    <!--Body content here -->
+    <div id="video_overlay">
+      <div class="icon" id="close_overlay">
+          <i class="ion-ios7-close-empty"></i>
+      </div>
+       <div class="player">
+           <iframe id="embedded" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+       </div>
+    </div>   
+    
+<div id="wrapall">
+    <nav id="main">
+       <div class="bar clearfix">
+            <div class="left">        
+                <a href="{{@blog.url}}"><h1>
+                    CI <span>E1</span>
+                </h1></a>
+            </div>
+            <div class="left">
+                <img src="{{@blog.url}}/images/Head_small.png" alt="CI">            
+            </div>            
+            <div class="right show-for-medium-up">
+                <ul class="inline-list">
+                    <li><a href="{{@blog.url}}">Accueil</a></li>
+                    <li><a href="{{@blog.url}}/fsoon">Forum</a></li>
+                    <li><a href="{{@blog.url}}/articles">Articles</a></li>
+                    <li><a href="{{@blog.url}}/tag/actu">Actus</a></li>
+                    <li><a href="{{@blog.url}}/videos">Vidéos</a></li>
+                    <li class="icon"><a href="https://www.facebook.com/ciesiee2014"><i class="ion-social-facebook"></i></a></li>
+                </ul>
+            </div>
+            <div class="right show-for-small-only" id="togglenav">
+                <i class="ion-navicon"></i>
+            </div>
+        </div>
+        <div class="mobile hide">
+            <ul class="">
+                    <li><a href="{{@blog.url}}">Accueil</a></li>
+                    <li><a href="{{@blog.url}}/fsoon">Forum</a></li>
+                    <li><a href="{{@blog.url}}/articles">Articles</a></li>
+                    <li><a href="{{@blog.url}}/tag/actu">Actus</a></li>
+                    <li><a href="{{@blog.url}}/videos">Vidéos</a></li>
+            </ul>            
+        </div>
+    </nav>
+
+<!---CONTENT HERE--->
+{{{body}}}
+</div> <!-- End of wrapall -->
+    <footer>
+        <div class="row">
+            <div class="medium-5 columns">
+            <p>
+                License 
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/">
+                    <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/fr/80x15.png" />
+                </a><br>
+                Design par <a href="http://maxenceaici.fr">Maxence Aïci</a> <span class="hide">v2</span> <br>
+                
+            </p>
+            </div>
+            <div class="medium-7 columns">
+            <p>Merci à tous les membres du CI E1 2014 et particulièrement à</p>
+                <ul class="members">
+                    <li>Victor Talvaz aka Kinder (Club *Nix)</li>
+                    <li>Florian Loyau aka Fira (Club *Nix)</li>
+                    <li>Franck Bonnet (SMIG ESIEE)</li>
+                    <li>DGQP</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+   <div class="scripts">
+
+    <script src="{{@blog.url}}/js/vendor/libraries.min.js"></script>
+    <script src="{{@blog.url}}/js/vendor/foundation.min.js"></script>
+    <script src="{{@blog.url}}/js/app.min.js"></script>
+    
+    {{!ghost_foot}}
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53022729-1', 'auto');
+  ga('send', 'pageview');
+  ga(‘set’, ‘&uid’, {{USER_ID}}); // Définir l'ID utilisateur à partir du paramètre user_id de l'utilisateur connecté.
+</script>
+    </div>
+  </body>
+</html>

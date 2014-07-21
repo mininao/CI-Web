@@ -18,15 +18,22 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"
   
     
     
   </head>
   <body>
     <!--Body content here -->
+    <div id="video_overlay">
+      <div class="icon" id="close_overlay">
+          <i class="ion-ios7-close-empty"></i>
+      </div>
+       <div class="player">
+           <iframe id="embedded" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+       </div>
+    </div>   
+    
 <div id="wrapall">
     <nav id="main">
        <div class="bar clearfix">
@@ -45,6 +52,7 @@
                     <li><a href="page.html">Articles</a></li>
                     <li>Actus</li>
                     <li>Vidéos</li>
+                    <li class="icon"><i class="ion-social-facebook"></i></li>
                 </ul>
             </div>
             <div class="right show-for-small-only" id="togglenav">
@@ -62,7 +70,7 @@
         </div>
     </nav>
 
-    <section id="articles" class="">
+    <section id="articles" class="spacenav">
         <h1>Les articles</h1>
         <div class="row">
             <div class="articlewrap small-12 medium-12 large-6 columns">
@@ -114,7 +122,7 @@
         <h1>Les vidéos</h1>
         <div class="row">
             <div class="videowrap small-12 medium-6 large-3 columns">
-                <div class="video" id="v1">
+                <div class="video" data-embed="U_wvSfgaTAo">
                     <div class="thumbnail" style="background-image:url(images/videos/thumb1f.jpg); ">
                         <i class="ion-ios7-play"></i>
                     </div>
@@ -124,27 +132,27 @@
                 </div>
             </div>
             <div class="videowrap small-12 medium-6 large-3 columns">
-                <div class="video">
-                    <div class="thumbnail" style="background-image:url(images/videos/thumb1f.jpg); ">
+                <div class="video" data-embed="bq65J5lcUlw">
+                    <div class="thumbnail" style="background-image:url(images/videos/elec.jpg); ">
                         <i class="ion-ios7-play"></i>
                     </div>
                     <div class="title">
-                        <h3>Zapping soirée</h3>
+                        <h3>Elections bde</h3>
                     </div>
                 </div>
             </div>
             <div class="videowrap small-12 medium-6 large-3 columns">
-                <div class="video">
-                    <div class="thumbnail" style="background-image:url(images/videos/thumb1f.jpg); ">
+                <div class="video" data-embed="YCA22AuHmwc">
+                    <div class="thumbnail" style="background-image:url(images/videos/campagne.jpg); ">
                         <i class="ion-ios7-play"></i>
                     </div>
                     <div class="title">
-                        <h3>Zapping soirée</h3>
+                        <h3>Campagne</h3>
                     </div>
                 </div>
             </div>
             <div class="videowrap small-12 medium-6 large-3 columns">
-                <div class="video">
+                <div class="video" data-embed="U_wvSfgaTAo">
                     <div class="thumbnail" style="background-image:url(images/videos/thumb1f.jpg); ">
                         <i class="ion-ios7-play"></i>
                     </div>
@@ -171,15 +179,15 @@
             <div class="medium-7 columns">
             <p>Merci à tous les membres du CI E1 2014 et particulièrement à</p>
                 <ul class="members">
-                    <li>Victor Talvaz aka Kinder (Club *nix)</li>
-                    <li>Florian Loyau aka Fira (Club *nix)</li>
+                    <li>Victor Talvaz aka Kinder (Club *Nix)</li>
+                    <li>Florian Loyau aka Fira (Club *Nix)</li>
                     <li>Franck Bonnet (SMIG ESIEE)</li>
                     <li>DGQP</li>
                 </ul>
             </div>
         </div>
-    </footer>   
-    
+    </footer>
+
    <div class="scripts">
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
@@ -210,6 +218,16 @@
     <script src="js/app.js"></script>
     
     <!-- endbuild -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53022729-1', 'auto');
+  ga('send', 'pageview');
+  ga(‘set’, ‘&uid’, {{USER_ID}}); // Définir l'ID utilisateur à partir du paramètre user_id de l'utilisateur connecté.
+</script>
     
     </div>
   </body>

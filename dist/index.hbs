@@ -1,0 +1,18 @@
+{{!< default}}
+
+    {{> articles}}  
+    <section id="actus" class="">
+        <h1>Les actus</h1>
+        <div class="row">
+            {{#foreach posts}}
+                <div class="actuwrap small-12 medium-6 large-3 columns">
+                    <div class="actu">
+                        <h2>{{title}}</h2>
+                        <p>{{excerpt characters="400"}} ... <br> <a href="{{url}}">Lire la suite !</a> <br></p>
+                        <p class="pub text-right">Publié le {{date published_at format="D/M/YYYY"}} par {{author}}</p>
+                    </div>
+                </div>                
+            {{/foreach}}
+        </div>      
+    </section>
+    {{> videos}} 
